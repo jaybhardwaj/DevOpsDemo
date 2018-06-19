@@ -1,0 +1,81 @@
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style type="text/css">
+  #id1
+  {
+    background-image: url('images/a12.jpg');
+    height: 100%;
+    width: 100%;
+    padding-left: 400px;
+    padding-top: 150px;
+  
+  }
+  #demo
+  {
+    background-color: #FFE4C4;
+    height: 450px;
+    width: 450px;
+    padding: 70px;
+  }
+   
+</style>
+
+<script>
+function validate() 
+{
+     
+    var x = document.myForm.email.value ;
+    var x1 =   document.myForm.password.value ;
+    var y =  document.myForm.password2.value ;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false; }
+
+    if (x1 == y)
+      {        
+        return true;
+      }
+    else
+      {
+        alert("password must be same");
+        return false;
+      }
+        
+    
+}
+</script>
+
+
+</head>
+<body>
+<form onsubmit="return validate();" action="/signup"  method="post" name="myForm" >
+<div class="container-fluid ">
+ 
+  <div id="id1" class="j">
+        <div id="demo">
+        <h2>Sign-up in Seconds</h2>
+        <div> 
+          <input type="text" class="form-control" name="username" placeholder="User Name" required="" autofocus="" style="width: 250px" />
+           <br>
+           <input type="text" class="form-control" name="email" placeholder="Email-iD" required="" autofocus="" style="width: 250px" /><br>
+          <input type="password" class="form-control" name="password" placeholder="Password" required="" autofocus="" style="width: 250px" />
+          <br>
+          <input type="password" class="form-control" name="password2" placeholder="Re Enter Password" required="" autofocus="" style="width: 250px" />
+          <br>
+          <button type="submit" class="btn btn-success" style="width: 250px" >Sign-Up</button>             
+  
+        </div>
+  </div>
+</div>
+</div>
+</form>
+</body>
+</html>

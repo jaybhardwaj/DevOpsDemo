@@ -1,0 +1,38 @@
+var nodemailer = require('nodemailer');
+var fn = require('./fns.js');
+
+
+  
+var nmailer = function(email,msg,auth_userid,auth_pass) {
+  console.log("in nmailer",email,user,pass);
+
+var transporter = nodemailer.createTransport({
+  
+   service: 'Gmail',
+    auth: {
+       user: auth_userid,
+        pass: auth_pass
+    }
+});
+
+
+var msg="<html><p>Your Password for loging is :"+pass+"</p><p>your user name is :"+user+"</p><p>your message :"+msg+"</p></html>";
+  var mailOptions = {
+    from: '<jay.prakash@polestarllp.com>',
+    to: email, // list of receivers
+    subject: 'Forgot Password',
+   // text: ufrom + msg,
+   //html: '<html><body>'+ufrom+ msgs+'</body></html>',
+   html:msg,
+
+  }
+  transporter.sendMail(mailOptions, function(err, info) {
+    if (err) {
+      console.log(err)
+    } else {
+console.log("mail sent");
+     
+    }
+  });
+}
+module.exports = nmailer;

@@ -1,0 +1,119 @@
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style type="text/css">
+  #id1
+  {
+    background-image: url('images/a11.jpg');
+    height: 100%;
+    width: 100%;
+    padding-left: 400px;
+    padding-top: 150px;
+  
+  }
+  #demo
+  {
+    background-color: #FFE4C4;
+    height: 450px;
+    width: 450px;
+    padding: 70px;
+  }
+   
+</style>
+<script>
+function valid()
+{
+    var x = document.myform1.mailid.value ;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+}
+}
+  
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+
+
+</script>
+</head>
+<body>
+<form action="/login" method="post">
+<div class="container-fluid ">
+  <div id="id1" class="j">
+        <div id="demo"><h3>Enter User Name</h3>
+          <input type="text" class="form-control" name="username" placeholder="User Name" required="" autofocus="" style="width: 250px" />
+          <h3>Enter your Password</h3>
+          <input type="password" class="form-control" name="password" placeholder="Password" required="" autofocus="" style="width: 250px" />
+          <br>
+          <table>
+            <tr>
+              <td><button type="submit" class="btn btn-success" style="padding-left: 20px">Login</button></td></form>
+              <td style="padding-left: 15px"><a href="/signup"><h4>sign-up</h4></a></td>
+              <td style="padding-left: 15px"><a data-toggle="modal" data-target="#myModal">Forget Password...?</a></td>
+              </tr>
+          </table>             
+  
+        </div>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
+<form name="myform1" onsubmit="return valid()" action="/email" method="post" >
+<div class="modal fade" id="myModal" role="dialog"  >
+    <div class="modal-dialog" >
+    
+      <!-- Modal content-->
+      <div class="modal-content" >
+        <div class="modal-header" style="background-color: #997F6B">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title">Don't worry...we are here to help you...</h2>
+        </div>
+        <div class="modal-body" id="div5" style="background-color:#6C9A97">
+        
+          <h3>Plz Enter Your Email-id if u are retailer</h3>
+          <input type="text" name="mailid" placeholder="Email-id" style="background-color:  #F2F2F2" required></input>
+          
+          <h3>Plz Enter email-id to whome u want to send msg</h3>
+          <input type="text" name="mail_id" placeholder="mail-id" style="background-color:  #F2F2F2" required></input>
+          
+          <h3>Plz Enter your msg</h3>
+            <input type="text" name="msg" placeholder="message" style="background-color:  #F2F2F2" required></input>
+        
+         <h3>Plz Enter mail-id from which you want to send mail</h3>
+          <input type="text" name="id" placeholder="id" style="background-color:  #F2F2F2" required></input>
+        
+          <h3>Plz Enter authorisation password</h3>
+          <input type="text" name="pass" placeholder="password" style="background-color:  #F2F2F2" required></input>
+ 
+          <h3>Plz Enter service provider for sending mail</h3>
+         <input type="text" name="service" placeholder="service" style="background-color:  #F2F2F2" required></input>
+           
+        </div>
+        <div class="modal-footer" style="background-color:  #251E1E" >
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">submit</button>
+          <button type="button" class="btn btn-primary"  onclick="printDiv('div5')">print me</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>

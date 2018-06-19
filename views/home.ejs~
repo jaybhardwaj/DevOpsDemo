@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style type="text/css">
+  .j
+  {
+    background-image: url('images (3).jpg');
+    height: 700px;
+    width: 100%;
+    padding-left: 400px;
+    padding-top: 150px;
+  
+  }
+  #demo
+  {
+    background-color: #FFE4C4;
+    height: 450px;
+    width: 450px;
+    padding: 70px;
+  }
+   
+</style>
+</head>
+<body>
+<form action="/" method="post">
+<div class="container-fluid ">
+  <div class="j">
+        <div id="demo"><h3>Enter User Name</h3>
+          <input type="text" class="form-control" name="username" placeholder="User Name" required="" autofocus="" style="width: 250px" />
+          <h3>Enter your Password</h3>
+          <input type="password" class="form-control" name="password" placeholder="Password" required="" autofocus="" style="width: 250px" />
+          <br>
+          <table>
+            <tr>
+              <td><button type="button" class="btn btn-success">Login</button></td>
+              <td><p style="padding-left:20px; padding-top: 10px"><a href="#">forget passwod..?</a></p></td>
+              </tr>
+          </table>             
+  
+        </div>
+  </div>
+</div>
+
+</form>
+</body>
+</html>

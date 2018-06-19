@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Billing System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <style>
+        
+         #demo1 {
+            background-image: url('images/images.jpg');
+            width: 100%;
+            height: 5000px%;
+
+        }
+        #demo2{
+        	background-color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="demo1">
+    <div class="container-fluid">
+        <div class="jumbotron" style="background-color: #298A08;">
+        <h1 style="text-align: center;">ONLINE BILLING SYSTEM</h1>
+        <a href="/logout"><button class="btn btn-primary">Log-out</button></a>
+        <a href="/bill"><button class="btn btn-primary">Print-Bill</button></a>
+
+        </div>
+    <div class="jumbotron" style="background-color: #0B614B ">
+        <div class="row">
+            <div class="col-md-3" style="background-color:#CEF6CE; height: 405px;border: solid;padding: 0px">
+                <form name="cal" style="width: 100%">
+                    <table style="width: 100%; bg-color:red">
+                        <tr>
+                <td colspan=5 style="height: 67px;width: 100%;"><input type=text name="display" style="height: 70px;width: 100%"></td>
+                        </tr>
+
+                        <tr>
+                            <td style="height: 65px;">
+                            <input type="button" value='1' onclick="cal.display.value+='1'" style="height: 65px;width: 100%; id="demo2"" ></td>
+                                <td style="height: 65px; ">
+                                <input type="button" value='2' onclick="cal.display.value+='2'" style="height: 65px;width: 100%"></td>
+                                <td style="height: 65px; ">
+                                <input type="button" value='3' onclick="cal.display.value+='3'" style="height: 65px;width: 100%"></td>
+                                <td style="height: 65px;">
+                                <input type="button" value='4' onclick="cal.display.value+='4'" style="height: 65px;width: 100%">
+                                </td>
+                        </tr>
+
+                        <tr>
+                            <td style="height: 65px; ">
+                            <input type="button" value='5' onclick="cal.display.value+='5'" style="height: 65px;width: 100%"></td>
+                                <td style="height: 65px;">
+                                <input type="button" value='6' onclick="cal.display.value+='6'" style="height: 65px;width: 100%"></td>
+                                <td style="height: 65px;">
+                                <input type="button" value='7' onclick="cal.display.value+='7'" style="height: 65px;width: 100%"></td>
+                                <td style="height: 65px;">
+                                <input type="button" value='8' onclick="cal.display.value+='8'" style="height: 65px;width: 100%"></td>
+                        </tr>
+
+                        <tr>
+                            <td style="height: 65px; ">
+                            <input type="button" value='9' onclick="cal.display.value+='9'" style="height: 65px;width: 100%" </td>
+                                <td style="height: 65px; ">
+                                <input type="button" value='0' onclick="cal.display.value+='0'" style="height: 65px;width: 100%"></td>
+                                <td style="height: 65px;">
+                                <input type="button" value='.' onclick="cal.display.value+='.'" style="height: 65px;width: 100%"></td>
+                                <td style="height: 65px;">
+                                <input type="button" value='c' onclick="cal.display.value=''" style="height: 65px;width: 100%"></td>
+                        </tr>
+
+
+                        <tr >
+                            <td style="height: 65px;">
+                            <input type="button" value='+' onclick="cal.display.value+='+'" style="height: 65px;width: 100%"></td>
+
+                            <td style="height: 65px;">
+                            <input type="button" value='-' onclick="cal.display.value+='-'" style="height: 65px;width: 100%"></td>
+                            <td style="height: 65px;">
+                            <input type="button" value='*' onclick="cal.display.value+='*'" style="height: 65px;width: 100%"></td>
+                            <td style="height: 65px;">
+                            <input type="button" value='/' onclick="cal.display.value+='/'" style="height: 65px;width: 100%"></td>
+                        </tr>
+                        <tr>
+
+                            <td colspan=5 style="height: 65px;width: 65px"><input type="button" value='=' onclick="cal.display.value = eval(cal.display.value)" style="height: 65px;width: 100%"></td>
+                        </tr>
+
+
+                    </table>
+                </form>
+            </div>
+
+
+            <form action="/submit" method="post">
+            <div class="col-md-9" style="background-color:#a6a6a6; border: solid;padding: 0px">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3><input type="checkbox" id="c1" required>Labour  </input></h3></div>
+                        <div class="col-md-6" style="margin-top: 20px;"><input type="text" id="dem1" style="width: 100px" required></input>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3><input type="checkbox" id="c2" required>Travel</h3> </input></div>
+                        <div class="col-md-6" style="margin-top: 20px"><input type="text" id="dem2" style="width: 100px"required></input>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3><input type="checkbox" id="c3" required>Plastic  </input></h3></div>
+                        <div class="col-md-6" style="margin-top: 20px"><input type="text" id="dem3" style="width: 100px" required></input>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3><input type="checkbox" id="c4" required>Copper </input></h3></div>
+                        <div class="col-md-6" style="margin-top: 20px"><input type="text" id="dem4" style="width: 100px" required></input>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3><input type="checkbox" id="c5" required>Silver </input></h3></div>
+                        <div class="col-md-6" style="margin-top: 20px"><input type="text" id="dem5" style="width: 100px" required></input>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3><input type="checkbox" id="c6" required>Gold </input></h3></div>
+                        <div class="col-md-6" style="margin-top: 20px"><input type="text" id="dem6" style="width: 100px" required></input>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-8" style="background-color: #cccccc;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>Total Cost Of Items  </h3></div>
+                        <div class="col-md-6" style="margin-top: 20px"> <input type="text" name="itemcost" id="dem7" align="right" required></input>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>Total Cost Of Delivery  </h3></div>
+                        <div class="col-md-6" style="margin-top: 20px"> <input type="text" name="deliverycost" id="dem8" align="right" required></input>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>Total Cost Of Mileage  </h3></div>
+                        <div class="col-md-6" style="margin-top: 20px"> <input type="text" id="dem9" align="right"></input>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <h3><input type="checkbox"></input>VAT</h3></div>
+                        <div class="col-md-6" style="margin-top: 20px"><input type="text"  id="dem10"></input>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3><input type="checkbox"></input>TAX</h3></div>
+                        <div class="col-md-6" style="margin-top: 20px"><input type="text"  id="dem11"></input>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+    
+
+    <div class="jumbotron" style="background-color: #0B614B">
+        <div class="row" style="margin: 30px">
+            <div class="col-md-4">
+                <h3>Sub Total</h3>
+                <h3>Tax</h3>
+                <h3 onclick="display()" id="jay">Total Amount</h3>
+            </div>
+            <div class="col-md-4">
+                <h3> <input type="text" id="dem12" ></input></h3>
+                <h3> <input type="text" name="taxcost" id="dem13"></input></h3>
+                <h3> <input type="text" name="amountcost" id="dem14"></input></h3></div>
+            <div class="col-md-4">
+                
+                <h3> <button type="button" onclick="reset();" style="width: 300px; height:33px">Reset</button></h3>
+                <h3> <button type="button" onclick="dis();" style="width: 300px; height:33px">Calculate</button></h3>
+                <h3> <button type="submit"  style="width: 300px; height:33px">Submit</button></h3> </div>
+
+        </div>
+    </div>
+    </div>
+</div>
+
+</form>
+</body>
+<script >
+function reset(){
+$('#dem1').val("");
+$('#dem2').val("");
+$('#dem3').val("");
+$('#dem4').val("");
+$('#dem5').val("");
+$('#dem6').val("");
+$('#dem7').val("");
+$('#dem8').val("");
+$('#dem9').val("");
+$('#dem10').val("");
+$('#dem11').val("");
+$('#dem12').val("");
+$('#dem13').val("");
+$('#dem14').val("");
+
+}
+    function dis(){
+    	
+    	 if ($("#c1").is(':checked')&&$("#c2").is(':checked'))
+         {
+    	     var a=$('#dem1').val()*100;
+    	     var b=$('#dem2').val()*100;
+    	     $('#dem8').val(+a + +b);
+          } 
+          
+        if ($("#c3").is(':checked')&&$("#c4").is(':checked')&&$("#c5").is(':checked')&&$("#c6").is(':checked'))
+        {
+        var c=$('#dem3').val()*1000;
+    	var d=$('#dem4').val()*1000;
+    	var e=$('#dem5').val()*1000;
+    	var f=$('#dem6').val()*1000;
+    	$('#dem7').val(+c + +d + +e + +f);
+        }
+
+        var g=$('#dem7').val();
+    	var h=$('#dem8').val();
+    	var i=(+g + +h)*14/100;
+        $('#dem10').val(+i);
+        var j=(+g + +h)*5/100;
+        $('#dem11').val(+j);
+        $('#dem12').val(+$('#dem8').val() + +$('#dem5').val() + +i + +j + +$('#dem7').val());
+        $('#dem13').val(+i + +j);
+        $('#dem14').val(+$('#dem12').val() + +$('#dem13').val());
+
+    }
+ 
+    </script>
+</html>
