@@ -1,0 +1,8 @@
+-#!/bin/sh      
+ssh root@139.162.47.185 -ip <<EOF        
+ cd devopsdemo/DevOpsDemo/
+ git pull
+ npm install
+ pm2 restart demoApp
+ exit       
+EOF
